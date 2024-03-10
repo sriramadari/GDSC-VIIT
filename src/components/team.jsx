@@ -24,52 +24,78 @@ const Team = () => {
       <div className="team-members">
         <div className="leads main-leads">
           <div className="team-member">
-            <img src={Aishwarya} alt="Aishwarya" />
+            <a href="https://www.linkedin.com/in/aishwarya-mangipudi-8b35b2158/">
+              <img src={Aishwarya} alt="Aishwarya" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Ravi} alt="Ravi" />
+            <a href="https://www.linkedin.com/in/kamsu-ravi-teeja/">
+              <img src={Ravi} alt="Ravi" />
+            </a>
           </div>
         </div>
         <div className="leads tech-leads">
           <div className="team-member">
-            <img src={Pavan} alt="Pavan" />
+            <a href="https://www.linkedin.com/in/meesala-pavan-kumar/">
+              <img src={Pavan} alt="Pavan" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Mounika} alt="Mounika" />
+            <a href="https://www.linkedin.com/in/mounika-mehar-0545a7227/">
+              <img src={Mounika} alt="Mounika" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Sriramadari} alt="Sriramadari" />
+            <a href="https://www.linkedin.com/in/sriram-adari-577649242/">
+              <img src={Sriramadari} alt="Sriram" />
+            </a>
           </div>
         </div>
         <div className="leads design-lead">
           <div className="team-member">
-            <img src={Lavanya} alt="Lavanya" />
+            <a href="https://www.linkedin.com/in/k-lavanya-kumari-399a56257/">
+              <img src={Lavanya} alt="Lavanya" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Ramana} alt="Ramana" />
+            <a href="https://www.linkedin.com/in/manasviramanasai/">
+              <img src={Ramana} alt="Ramana" />
+            </a>
           </div>
         </div>
         <div className="leads editorial-leads">
           <div className="team-member">
-            <img src={Mehrun} alt="Mehrun" />
+            <a href="https://www.linkedin.com/in/mehrun-shamshi-879191253/">
+              <img src={Mehrun} alt="Mehrun" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Suhas} alt="Suhas" />
+            <a href="https://www.linkedin.com/in/malakala-suhas-badrinath-355532252/">
+              <img src={Suhas} alt="Suhas" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Srujan} alt="srujan" />
+            <a href="https://www.linkedin.com/in/srujan-k-991837255/">
+              <img src={Srujan} alt="Srujan" />
+            </a>
           </div>
         </div>
 
         <div className="leads management-leads">
           <div className="team-member">
-            <img src={Aditya} alt="Aditya" />
+            <a href="https://www.linkedin.com/in/aditya-sai-rompella-3006a125a/">
+              <img src={Aditya} alt="Aditya" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={mohit} alt="mohit" />
+            <a href="https://www.linkedin.com/in/mohith-vishal-22620a214/">
+              <img src={mohit} alt="mohit" />
+            </a>
           </div>
           <div className="team-member">
-            <img src={Sanjay} alt="Sanjay" />
+            <a href="https://www.linkedin.com/in/sanjay-varma-5b7800228/">
+              <img src={Sanjay} alt="Sanjay" />
+            </a>
           </div>
         </div>
       </div>
