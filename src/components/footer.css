@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+    background-color: #B9B8CA;
+}
+
+.footer-logo, .social-links {
+    background-color: inherit; 
+  }

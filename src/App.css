@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* background-color: var(--primary-color); */
+}
+body {
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #0c0c0c;
+  --secondary-color: #f7f7f7;
+  --tertiary-color: #f26a2e;
+  --quaternary-color: #574c4c;
+  --quinary-color: #f2f2f2;
+  --senary-color: #f7f7f7;
+  --septenary-color: #f7f7f7;
+  --octonary-color: #f7f7f7;
+  --nonary-color: #f7f7f7;
+  --denary-color: #f7f7f7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  width: 100%;
+  padding: 50px 15px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100px;
+  background-color: var(--primary-color);
+  color: var(--denary-color);
 }
 
-.App-link {
-  color: #61dafb;
+header .logo{
+  margin-left: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+header nav{
+  margin-right: 60px;
+}
+
+nav .a{
+  margin: 0 2.20rem;
+  font-size: 20px;
+  font-weight: 650;
+  color: var(--denary-color);
+  text-decoration: none;
+}
+
+nav .a:hover{
+  color: var(--nonary-color);
+}
+header .nav-button{
+  padding: 45px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--denary-color);
+  display: none;
+  opacity: 0;
+}
+
+header .small-logo{
+  display: none;
+}
+
+@media (max-width: 1324px){
+
+  nav .a{
+    margin: 0 1.3rem;
+    font-size: 19px;
+    font-weight: 650;
+    color: var(--denary-color);
+    text-decoration: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1156px){
+  header .nav-button{
+    display: block;
+    opacity: 1;
+  }
+
+  header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background-color: var(--primary-color);
+    transition: 1s;
+    transform: translateY(-200vh);
+  }
+  header .open{
+    transform: none;
+  }
+
+}
+
+@media (max-width: 865px){
+  header {
+    width: 116.5%;
+  }
+  header .logo{
+  display: none;
+  }
+  header .small-logo{
+    display: block;
+    margin-left: 50px;
   }
 }
