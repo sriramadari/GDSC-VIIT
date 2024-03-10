@@ -105,6 +105,10 @@ header .small-logo {
   }
 }
 
+@media (max-width: 1024px) {
+  /* Adjustments for screens up to 1024px wide */
+}
+
 @media (max-width: 865px) {
   header {
     width: 116.5%;
@@ -116,4 +120,13 @@ header .small-logo {
     display: block;
     margin-left: 50px;
   }
+}
+
+@media (max-width: 600px) {
+  /* Adjustments for screens up to 600px wide (e.g., smartphones) */
+}
+
+/* Additional media query for even smaller screens if needed */
+@media (max-width: 400px) {
+  /* Adjustments for screens up to 400px wide */
 }
