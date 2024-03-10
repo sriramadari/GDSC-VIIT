@@ -1,13 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: normal;
 }
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-kiwi-maru: "Kiwi Maru";
+  --font-fuzzy-bubbles: "Fuzzy Bubbles";
+  --font-bungee-outline: "Bungee Outline";
+  --font-homemade-apple: "Homemade Apple";
+  --font-montserrat: Montserrat;
+  --font-bungee-shade: "Bungee Shade";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font sizes */
+  --font-size-11xl: 30px;
+  --font-size-5xl: 24px;
+  --font-size-9xl: 28px;
+  --font-size-3xl: 22px;
+  --font-size-19xl: 38px;
+  --font-size-4xl: 23px;
+  --font-size-xl: 20px;
+  --font-size-base: 16px;
+  --font-size-lgi: 19px;
+  --font-size-7xl: 26px;
+  --font-size-2xl: 21px;
+  --font-size-51xl: 70px;
+  --font-size-37xl: 56px;
+  --font-size-23xl: 42px;
+  --font-size-45xl: 64px;
+  --font-size-32xl: 51px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-snow: #fff7f7;
+  --color-gray-100: rgba(0, 0, 0, 0.49);
+  --color-gray-200: rgba(0, 0, 0, 0.52);
+  --color-gray-300: rgba(0, 0, 0, 0.56);
+  --color-gray-400: rgba(0, 0, 0, 0.58);
+  --color-gray-500: rgba(255, 255, 255, 0);
+  --color-black: #000;
+  --color-gainsboro: #d9d9d9;
+  --color-powderblue: #b1e8f4;
+  --color-goldenrod: #f1bb0b;
+  --color-mediumseagreen: #0f9c57;
+  --color-tomato: #e94335;
+  --color-dodgerblue: #4285f4;
+
+  /* Gaps */
+  --gap-54xl: 73px;
+  --gap-17xl: 36px;
+  --gap-lg: 18px;
+  --gap-7xl: 26px;
+  --gap-xl: 20px;
+  --gap-0: 0px;
+  --gap-47xl: 66px;
+  --gap-5xs: 8px;
+  --gap-12xs: 1px;
+  --gap-70xl: 89px;
+  --gap-3xl: 22px;
+  --gap-25xl: 44px;
+  --gap-8xs: 5px;
+  --gap-39xl: 58px;
+  --gap-10xl: 29px;
+  --gap-5xl-7: 24.7px;
+  --gap-smi-7: 12.7px;
+  --gap-6xl-7: 25.7px;
+
+  /* Paddings */
+  --padding-xl: 20px;
+  --padding-35xl: 54px;
+  --padding-274xl: 293px;
+  --padding-235xl: 254px;
+  --padding-294xl: 313px;
+  --padding-16xl: 35px;
+  --padding-127xl: 146px;
+  --padding-146xl: 165px;
+  --padding-137xl: 156px;
+  --padding-20xl: 39px;
+  --padding-17xl: 36px;
+  --padding-39xl: 58px;
+  --padding-213xl: 232px;
+  --padding-97xl: 116px;
+  --padding-19xl: 38px;
+  --padding-317xl: 336px;
+  --padding-11xl: 30px;
+  --padding-199xl: 218px;
+  --padding-8xs: 5px;
+  --padding-5xl: 24px;
+  --padding-4xl: 23px;
+  --padding-2xs: 11px;
+  --padding-34xl: 53px;
+  --padding-15xl: 34px;
+  --padding-2xl: 21px;
+  --padding-mid: 17px;
+  --padding-lgi: 19px;
+  --padding-38xl: 57px;
+  --padding-309xl: 328px;
+  --padding-194xl: 213px;
+  --padding-23xl: 42px;
+  --padding-7xs: 6px;
+  --padding-10xs: 3px;
+  --padding-103xl: 122px;
+  --padding-32xl: 51px;
+  --padding-60xl: 79px;
+  --padding-368xl: 387px;
+  --padding-6xl: 25px;
+  --padding-233xl: 252px;
+  --padding-10xl: 29px;
+  --padding-36xl: 55px;
+  --padding-8xl: 27px;
+  --padding-smi: 13px;
+  --padding-lg: 18px;
+  --padding-7xl: 26px;
+  --padding-88xl: 107px;
+  --padding-28xl: 47px;
+  --padding-50xl: 69px;
+  --padding-54xl: 73px;
+  --padding-xs: 12px;
+  --padding-145xl: 164px;
+  --padding-3xs: 10px;
+  --padding-156xl: 175px;
+  --padding-95xl: 114px;
+  --padding-base-7: 16.7px;
+  --padding-363xl: 382px;
+  --padding-172xl: 191px;
+  --padding-4xs: 9px;
+  --padding-base: 16px;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+  --br-xl: 20px;
+  --br-37xl: 56px;
 }
