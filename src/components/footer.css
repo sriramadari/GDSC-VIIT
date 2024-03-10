@@ -1,12 +1,28 @@
-.footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 70px;
-    background-color: #B9B8CA;
+.footer-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+  color: white;
+  padding: 20px;
+  background: #b9b8ca;
+  border-radius: 10px;
 }
 
-.footer-logo, .social-links {
-    background-color: inherit; 
-  }
+.card-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-logo,
+.social-links {
+  background-color: inherit;
+}
+
+.footer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}

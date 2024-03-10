@@ -15,7 +15,15 @@ const Home = () => {
             sessions, we aim to create a community that values continuous growth
             and sharing of expertise.
           </p>
-          <div className="hero-button"><a href="https://gdsc.community.dev/vignans-institute-of-information-technology-visakhapatnam/" target="_blank" rel="noreferrer"><Checkout/></a></div>
+          <div className="hero-button">
+            <a
+              href="https://gdsc.community.dev/vignans-institute-of-information-technology-visakhapatnam/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Checkout />
+            </a>
+          </div>
         </div>
       </div>
       <div className="play">

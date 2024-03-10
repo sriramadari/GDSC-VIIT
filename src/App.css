@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
 }
 body {
   overflow-x: hidden;
+  background-color: var(--primary-color);
 }
 
 :root {
@@ -24,7 +24,7 @@ body {
   --denary-color: #f7f7f7;
 }
 
-header{
+header {
   width: 100%;
   padding: 50px 15px 0;
   display: flex;
@@ -35,26 +35,26 @@ header{
   color: var(--denary-color);
 }
 
-header .logo{
+header .logo {
   margin-left: 60px;
 }
 
-header nav{
+header nav {
   margin-right: 60px;
 }
 
-nav .a{
-  margin: 0 2.20rem;
+nav .a {
+  margin: 0 2.2rem;
   font-size: 20px;
   font-weight: 650;
   color: var(--denary-color);
   text-decoration: none;
 }
 
-nav .a:hover{
+nav .a:hover {
   color: var(--nonary-color);
 }
-header .nav-button{
+header .nav-button {
   padding: 45px;
   cursor: pointer;
   background: transparent;
@@ -65,13 +65,12 @@ header .nav-button{
   opacity: 0;
 }
 
-header .small-logo{
+header .small-logo {
   display: none;
 }
 
-@media (max-width: 1324px){
-
-  nav .a{
+@media (max-width: 1324px) {
+  nav .a {
     margin: 0 1.3rem;
     font-size: 19px;
     font-weight: 650;
@@ -80,13 +79,13 @@ header .small-logo{
   }
 }
 
-@media (max-width: 1156px){
-  header .nav-button{
+@media (max-width: 1156px) {
+  header .nav-button {
     display: block;
     opacity: 1;
   }
 
-  header nav{
+  header nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -101,20 +100,19 @@ header .small-logo{
     transition: 1s;
     transform: translateY(-200vh);
   }
-  header .open{
+  header .open {
     transform: none;
   }
-
 }
 
-@media (max-width: 865px){
+@media (max-width: 865px) {
   header {
     width: 116.5%;
   }
-  header .logo{
-  display: none;
+  header .logo {
+    display: none;
   }
-  header .small-logo{
+  header .small-logo {
     display: block;
     margin-left: 50px;
   }
