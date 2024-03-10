@@ -38,18 +38,17 @@
   }
 
   .events-image {
-    width:360px;
-    height:480px;
+    width:300px;
+    height:450px;
 }
 
 .carousel {
-    margin-left: 200px;
+    margin-left: 130px;
     margin-top: 60px;
     display: flex;
-    margin-right: 200px;
+    margin-right: 110px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    /* scroll-padding: 50%; */
     scroll-snap-align: center;
 }
 
@@ -58,15 +57,14 @@
 }
 
 .carousel {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 }
 
 .carousel a {
     flex: 0 0 auto;
     margin-right: 20px;
     scroll-snap-align: start;
-    /* width: 33.33%; Show 3 images at a time */
 }
 
 .image-scroller {
@@ -93,8 +91,27 @@
     }
 
   } 
-
+  
   @media (max-width: 865px){
+
+    .carousel{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-type: none;
+      overflow-x: hidden;
+      scroll-snap-type: none;
+      margin: 20px 50px;
+      margin-top: 70px;
+      /* margin-left: 100px; */
+      scroll-snap-align: unset;
+    }
+
+    .carousel img {
+      width:400px;
+      height:550px;
+     }
 
     .recent-events-wrapper {
         display: flex;
@@ -102,5 +119,21 @@
         justify-content: center;
         align-items: center;
         margin-top: 70px;
+        margin-left: 70px ;
+    }
+  }
+
+  @media (max-width: 630px){
+    .recent-events{
+      width: 420px;
+      height: 50px;
+    }
+    .carousel{
+      margin-left: 70px;
+    }
+    .carousel img {
+      padding-left: 30px;
+      width:300px;
+      height:400px;
     }
   }
