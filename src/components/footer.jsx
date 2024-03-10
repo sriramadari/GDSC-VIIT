@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer-logo">
           <img src={Gdsc} alt="gdsc" />
         </div>
-        <h1 className="social">Socials</h1>
+        <h1 className="social">Social</h1>
         <div className="social-links">
           <a href="https://www.instagram.com/gdscviit/">
             <img src={Insta} alt="Instagram" />

@@ -6,7 +6,7 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <section className="home">
+    <section id="home" className="home">
       <div className="hero">
         <img src={weAreGDSC} alt="we are GDSC" />
         <div className="hero-para-div">
