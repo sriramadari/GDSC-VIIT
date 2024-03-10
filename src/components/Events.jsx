@@ -9,7 +9,7 @@ import { ReactComponent as Seemore } from '../assets/see more.svg'
 
 const Events = () => {
   return (
-   <section className="events">
+   <section id="events" className="events">
     <div className="recent-events-wrapper">
           <RecentEvents className="recent-events" />
     </div>

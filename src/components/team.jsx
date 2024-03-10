@@ -17,7 +17,7 @@ import Srujan from "../assets/team/srujan.png";
 
 const Team = () => {
   return (
-    <section className="team">
+    <section id="team" className="team">
       <div className="meet-the-team">
         <TeamImage className="team-image" />
       </div>

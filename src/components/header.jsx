@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import { useRef } from 'react'
 import { ReactComponent as OnlyLogo } from '../assets/small-logo.svg'
 import { ReactComponent as Gdsc } from '../assets/logo.svg'
@@ -16,11 +16,11 @@ const Header = () => {
         <Gdsc className="logo"/>
         <OnlyLogo className="small-logo"/>
         <nav className="nav-elements" ref={ref}>
-              <NavLink className="a" to="/">HOME</NavLink>
-              <NavLink className="a" to="/events">EVENTS</NavLink>
-              <NavLink className="a" to="/hackthon">HACKTHON</NavLink>
-              <NavLink className="a" to="/team">TEAM</NavLink>
-              <NavLink className="a" to="/contact">CONTACT US</NavLink>
+              <Link activeClass="" to='home' spy={true} smooth={true} offset={-70} duration={500} className="a" onClick={openNav}>HOME</Link>
+              <Link activeClass='active' to='events' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav}  className="a" >EVENTS</Link>
+              <Link activeClass='active' to='hackthon' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav} className="a" >HACKTHON</Link>
+              <Link activeClass='active' to='team' spy={true} smooth={true} offset={-70} duration={500} onClick={openNav}  className="a" >TEAM</Link>
+              <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav} className="a" >CONTACT US</Link>
           <button className="nav-button nav-close" onClick={openNav}><Close /></button>
         </nav>
         <button className="nav-button" onClick={openNav}><Menu/></button>
