@@ -136,6 +136,7 @@
     .carousel{
       display: flex;
       flex-direction: column;
+      gap: 10px;
       align-items: center;
       justify-content: center;
       scroll-snap-type: none;
@@ -174,6 +175,7 @@
     }
     .carousel{
       margin: 0;
+      margin-top: 50px;
     }
     .carousel img {
       /* padding-left: 30px; */
