@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./events.css";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { ReactComponent as RecentEvents } from "../assets/RECENT EVENTS.svg";
 import group1 from "../assets/events/Group 1.png";
@@ -11,25 +11,25 @@ import group5 from "../assets/events/Group 5.png";
 import group6 from "../assets/events/Group 6.png";
 import group7 from "../assets/events/Group 7.png";
 import group8 from "../assets/events/Group 8.png";
-import group9 from "../assets/events/Group 9.png";
-import { ReactComponent as Group } from "../assets/events/Group 1.svg";
-import { ReactComponent as Seemore } from "../assets/see more.svg";
+// import group9 from "../assets/events/Group 9.png";
+// import { ReactComponent as Group } from "../assets/events/Group 1.svg";
+// import { ReactComponent as Seemore } from "../assets/see more.svg";
 
 const Events = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  // const responsive = {
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //   },
+  // };
   return (
     <section id="events" className="events">
       <div className="recent-events-wrapper">
