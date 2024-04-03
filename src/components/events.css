@@ -43,7 +43,7 @@
 }
 
 .carousel {
-    margin-left: 130px;
+    /* margin-left: 130px; */
     margin-top: 60px;
     display: flex;
     margin-right: 110px;
@@ -165,11 +165,11 @@
       width: 420px;
       height: 50px;
     }
-    /* .carousel{
-      margin-left: 70px;
-    } */
+    .carousel{
+      margin: 0;
+    }
     .carousel img {
-      padding-left: 30px;
+      /* padding-left: 30px; */
       width:300px;
       height:400px;
     }
