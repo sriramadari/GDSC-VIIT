@@ -37,15 +37,19 @@ const Events = () => {
 
   const scroll = (direction) => {
     if (carouselref.current) {
-      if (direction=="left"){
-        var scrollamount = -300;
+      var scrollamount;
+      if (direction==="left"){
+        scrollamount = -300;
       }
-      else if (direction=="right"){
-        var scrollamount = 300;
+      else if (direction==="right"){
+        scrollamount = 300;
       }
       carouselref.current.scrollLeft += scrollamount;
+      
     }
   }
+
+
 
   return (
     <section id="events" className="events">
@@ -54,7 +58,7 @@ const Events = () => {
       </div>
       <div className="carousel" ref={carouselref}>
         <div className="left">
-          <img src={leftarrow} onClick={() => scroll("left")} />
+          <img src={leftarrow} onClick={() => scroll("left")} alt="left" />
         </div>
         {/* <Carousel responsive={responsive}> */}
         {/* <Group className="group" /> */}
@@ -83,7 +87,7 @@ const Events = () => {
           <img src={group8} alt="group8" className="events-image" />
         </a>
         <div className="right">
-          <img src={rightarrow} onClick={() => scroll("right")} />
+          <img src={rightarrow} onClick={() => scroll("right")} alt="right"/>
         </div>
       </div>
     </section>
