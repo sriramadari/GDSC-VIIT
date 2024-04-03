@@ -91,12 +91,19 @@
 }
 
 .left img, .right img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
   background-color: rgba(49, 49, 49, 0.514);
   width: 60px;
   height: 60px;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%; /* need to work on this again */
+}
+
+.carousel:hover .left img,
+.carousel:hover .right img {
+  opacity: 1;
 }
 
 .image-scroller {

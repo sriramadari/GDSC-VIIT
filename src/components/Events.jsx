@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./events.css";
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -32,14 +32,29 @@ const Events = () => {
   //     items: 1,
   //   },
   // };
+
+  const carouselref = useRef(null);
+
+  const scroll = (direction) => {
+    if (carouselref.current) {
+      if (direction=="left"){
+        var scrollamount = -300;
+      }
+      else if (direction=="right"){
+        var scrollamount = 300;
+      }
+      carouselref.current.scrollLeft += scrollamount;
+    }
+  }
+
   return (
     <section id="events" className="events">
       <div className="recent-events-wrapper">
         <RecentEvents className="recent-events" />
       </div>
-      <div className="carousel">
+      <div className="carousel" ref={carouselref}>
         <div className="left">
-          <img src={leftarrow} />
+          <img src={leftarrow} onClick={() => scroll("left")} />
         </div>
         {/* <Carousel responsive={responsive}> */}
         {/* <Group className="group" /> */}
@@ -68,7 +83,7 @@ const Events = () => {
           <img src={group8} alt="group8" className="events-image" />
         </a>
         <div className="right">
-          <img src={rightarrow} />
+          <img src={rightarrow} onClick={() => scroll("right")} />
         </div>
       </div>
     </section>
