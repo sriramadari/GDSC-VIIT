@@ -43,7 +43,7 @@
 }
 
 .carousel {
-    margin-left: 130px;
+    margin-left: 110px;
     margin-top: 60px;
     display: flex;
     margin-right: 110px;
@@ -51,6 +51,7 @@
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 .carousel::-webkit-scrollbar {

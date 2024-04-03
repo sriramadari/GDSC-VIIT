@@ -34,6 +34,7 @@ const Events = () => {
   // };
 
   const carouselref = useRef(null);
+  const leftref = useRef(null);
 
   const scroll = (direction) => {
     if (carouselref.current) {
@@ -45,11 +46,18 @@ const Events = () => {
         scrollamount = 300;
       }
       carouselref.current.scrollLeft += scrollamount;
-      
     }
   }
 
-
+  if(carouselref.current) {
+    console.log(carouselref.current.scrollLeft)
+    if(carouselref.current.scrollLeft === 60 || window.innerWidth <= "865px") {
+      leftref.current.style.display = "none";
+    }
+    else {
+      leftref.current.style.display = "flex";
+    }
+  }
 
   return (
     <section id="events" className="events">
@@ -57,7 +65,7 @@ const Events = () => {
         <RecentEvents className="recent-events" />
       </div>
       <div className="carousel" ref={carouselref}>
-        <div className="left">
+        <div className="left" ref={leftref}>
           <img src={leftarrow} onClick={() => scroll("left")} alt="left" />
         </div>
         {/* <Carousel responsive={responsive}> */}
