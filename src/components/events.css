@@ -1,4 +1,4 @@
- .events{
+.events{
   background-color: var(--primary-color);
  }
  
@@ -78,6 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: display 0.3s ease-in-out;
 }
 
 .right {
@@ -89,6 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: display 0.3s ease-in-out;
 }
 
 .left img, .right img {
@@ -107,7 +109,7 @@
   opacity: 1;
 }
 
-.image-scroller {
+/* .image-scroller {
   display: flex;
   overflow-x: auto;
   justify-content: center;
@@ -119,7 +121,7 @@
 .image-scroller img {
   width:250px;
   height:350px;
- }
+ } */
 
   @media (max-width: 1324px){
     .events-wrapper {

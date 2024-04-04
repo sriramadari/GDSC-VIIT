@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./events.css";
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -35,6 +35,34 @@ const Events = () => {
 
   const carouselref = useRef(null);
   const leftref = useRef(null);
+  const rightref = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (carouselref.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = carouselref.current;
+        if (scrollLeft === 60 || scrollLeft === 0) { // 60px is the width of left arrow, so scrollLeft is 60 initially. after the arrow disappears, scrollLeft becomes zero.
+          leftref.current.style.display = "none";
+        } else {
+          leftref.current.style.display = "flex";
+        }
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          rightref.current.style.display = "none";
+        } else {
+          rightref.current.style.display = "flex";
+        }
+      }
+    }
+
+    if (carouselref.current) {
+      carouselref.current.addEventListener("scroll", handleScroll);
+    }
+    return () => {
+      if (carouselref.current) {
+        carouselref.current.removeEventListener("scroll", handleScroll);
+      }
+    }
+  }, []);
 
   const scroll = (direction) => {
     if (carouselref.current) {
@@ -46,16 +74,6 @@ const Events = () => {
         scrollamount = 300;
       }
       carouselref.current.scrollLeft += scrollamount;
-    }
-  }
-
-  if(carouselref.current) {
-    console.log(carouselref.current.scrollLeft)
-    if(carouselref.current.scrollLeft === 60 || window.innerWidth <= "865px") {
-      leftref.current.style.display = "none";
-    }
-    else {
-      leftref.current.style.display = "flex";
     }
   }
 
@@ -94,7 +112,7 @@ const Events = () => {
         <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-inauguration-followed-by-a-session-on-flutter/">
           <img src={group8} alt="group8" className="events-image" />
         </a>
-        <div className="right">
+        <div className="right" ref={rightref}>
           <img src={rightarrow} onClick={() => scroll("right")} alt="right"/>
         </div>
       </div>
