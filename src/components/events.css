@@ -137,51 +137,53 @@
 
   @media (max-width: 1324px){
     .events-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
 
   } 
   
-  @media (max-width: 865px){
+@media (max-width: 865px){
 
-    .carousel{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      scroll-snap-type: none;
-      overflow-x: hidden;
-      margin: 20px 50px;
-      margin-top: 70px;
-      margin-left: 100px;
-      scroll-snap-align: unset;
-    }
-
-    .carousel img {
-      width:400px;
-      height:550px;
-     }
-
-     .left,.right {
-      display: none;
-     }
-
-    .recent-events-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 70px;
-    }
-    .recent-events {
-      max-width: 90vw;
-    }
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-type: none;
+    overflow-x: hidden;
+    scroll-snap-align: unset;
   }
+
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel img {
+    width:400px;
+    height:550px;
+  }
+
+  .left,.right {
+    display: none;
+  }
+
+  .recent-events-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  .recent-events {
+    max-width: 90vw;
+  }
+}
 
   @media (max-width: 630px){
     .recent-events {
