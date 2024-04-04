@@ -6,7 +6,7 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       <div className="footer-1">
         <div className="footer-logo">
           <img src={Gdsc} alt="gdsc" />
@@ -20,8 +20,8 @@ const Footer = () => {
             <img src={Linkendin} alt="Linkedin" />
           </a>
         </div>
-      </div>
-      <div className="footer-2">
+      {/* </div>
+      <div className="footer-2"> */}
         <div className="footer-text">
           <h1>© GDSC-VIIT</h1>
         </div>

@@ -20,7 +20,7 @@ const Header = () => {
               <Link activeClass='active' to='events' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav}  className="a" >EVENTS</Link>
               <Link activeClass='active' to='hackthon' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav} className="a" >HACKTHON</Link>
               <Link activeClass='active' to='team' spy={true} smooth={true} offset={-70} duration={500} onClick={openNav}  className="a" >TEAM</Link>
-              <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav} className="a" >CONTACT US</Link>
+              <Link activeClass='active' to='footer' spy={true} smooth={true} offset={-70} duration={500}  onClick={openNav} className="a" >CONTACT US</Link>
           <button className="nav-button nav-close" onClick={openNav}><Close /></button>
         </nav>
         <button className="nav-button" onClick={openNav}><Menu/></button>

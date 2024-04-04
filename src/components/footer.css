@@ -6,8 +6,10 @@
   margin-top: 70px;
   color: white;
   padding: 20px;
-  background: #b9b8ca;
+  background: #3b3b3b;
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   width: 100%;
 }
 
@@ -20,10 +22,14 @@
   background-color: inherit;
 }
 
-.footer-2 {
+.footer-logo img {
+  max-width: 90vw;
+}
+
+/* .footer-2 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: white;
-}
+} */
