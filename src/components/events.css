@@ -42,15 +42,21 @@
     height:450px;
 }
 
+.carousel-wrapper {
+  position: relative;
+  margin-left: 110px;
+  margin-top: 60px;
+  display: flex;
+  margin-right: 110px;
+}
+
 .carousel {
-    margin-left: 110px;
-    margin-top: 60px;
     display: flex;
-    margin-right: 110px;
     overflow-x: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
-    position: relative;
     scroll-behavior: smooth;
 }
 
@@ -69,23 +75,29 @@
     scroll-snap-align: start;
 }
 
+.carousel img {
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px 5px 10px 5px #1f1c17;
+}
+
 .left {
-  position: sticky;
+  display: none; /* initially hide */
+  position: absolute;
   z-index: 999;
   top: 0;
-  left: 0;
+  left: 5px;
   bottom: 0;
-  display: flex;
   align-items: center;
   justify-content: center;
   transition: display 0.3s ease-in-out;
 }
 
 .right {
-  position: sticky;
+  position: absolute;
   z-index: 999;
   top: 0;
-  right: 0;
+  right: 5px;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -104,8 +116,8 @@
   border-radius: 50%; /* need to work on this again */
 }
 
-.carousel:hover .left img,
-.carousel:hover .right img {
+.carousel-wrapper:hover .left img,
+.carousel-wrapper:hover .right img {
   opacity: 1;
 }
 

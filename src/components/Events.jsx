@@ -41,7 +41,7 @@ const Events = () => {
     const handleScroll = () => {
       if (carouselref.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselref.current;
-        if (scrollLeft === 60 || scrollLeft === 0) { // 60px is the width of left arrow, so scrollLeft is 60 initially. after the arrow disappears, scrollLeft becomes zero.
+        if (scrollLeft === 0) {
           leftref.current.style.display = "none";
         } else {
           leftref.current.style.display = "flex";
@@ -62,7 +62,7 @@ const Events = () => {
         carouselref.current.removeEventListener("scroll", handleScroll);
       }
     }
-  }, []);
+  }, [])
 
   const scroll = (direction) => {
     if (carouselref.current) {
@@ -82,36 +82,38 @@ const Events = () => {
       <div className="recent-events-wrapper">
         <RecentEvents className="recent-events" />
       </div>
-      <div className="carousel" ref={carouselref}>
+      <div className="carousel-wrapper">
         <div className="left" ref={leftref}>
-          <img src={leftarrow} onClick={() => scroll("left")} alt="left" />
+              <img src={leftarrow} onClick={() => scroll("left")} alt="left" />
         </div>
-        {/* <Carousel responsive={responsive}> */}
-        {/* <Group className="group" /> */}
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-intro-to-rebase/cohost-vignans-institute-of-information-technology-visakhapatnam">
-          <img src={group1} alt="group1" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-from-gpt3-to-beyond-understanding-large-language-models/">
-          <img src={group2} alt="group2" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-android-accelerator-exploring-the-android-realm/">
-          <img src={group3} alt="group3" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-getting-started-with-flutter-building-your-first-app/">
-          <img src={group4} alt="group4" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-design-wonderland/">
-          <img src={group5} alt="group5" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-kalasalingam-academy-of-research-education-krishnankoil-presents-introduction-to-google-solution-challenge-2024/cohost-vignans-institute-of-information-technology-visakhapatnam">
-          <img src={group6} alt="group6" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-intro-to-open-source-amp-hands-on-git-amp-github-1/">
-          <img src={group7} alt="group7" className="events-image" />
-        </a>
-        <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-inauguration-followed-by-a-session-on-flutter/">
-          <img src={group8} alt="group8" className="events-image" />
-        </a>
+        <div className="carousel" ref={carouselref}>
+          {/* <Carousel responsive={responsive}> */}
+          {/* <Group className="group" /> */}
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-intro-to-rebase/cohost-vignans-institute-of-information-technology-visakhapatnam">
+            <img src={group1} alt="group1" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-from-gpt3-to-beyond-understanding-large-language-models/">
+            <img src={group2} alt="group2" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-android-accelerator-exploring-the-android-realm/">
+            <img src={group3} alt="group3" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-getting-started-with-flutter-building-your-first-app/">
+            <img src={group4} alt="group4" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-design-wonderland/">
+            <img src={group5} alt="group5" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-kalasalingam-academy-of-research-education-krishnankoil-presents-introduction-to-google-solution-challenge-2024/cohost-vignans-institute-of-information-technology-visakhapatnam">
+            <img src={group6} alt="group6" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-intro-to-open-source-amp-hands-on-git-amp-github-1/">
+            <img src={group7} alt="group7" className="events-image" />
+          </a>
+          <a href="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-inauguration-followed-by-a-session-on-flutter/">
+            <img src={group8} alt="group8" className="events-image" />
+          </a>
+        </div>
         <div className="right" ref={rightref}>
           <img src={rightarrow} onClick={() => scroll("right")} alt="right"/>
         </div>
