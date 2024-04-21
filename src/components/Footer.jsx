@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="md:text-[20px] sm:text-[15px] lg:text-[20px] text-xl">
                   Google Developer Student Clubs
                 </div>
-                <div className="lg:text-[15px] md:text-[10px] sm:text-[10px] text-xs">
+                <div className="lg:text-[15px] md:text-[10px] sm:text-[8px] text-xs">
                   Vignan&apos;s Institute of Information Technology -
                   Visakhapatnam
                 </div>
