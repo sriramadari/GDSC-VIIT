@@ -1,52 +1,113 @@
-import React, { useRef, useState, useEffect } from "react";
+import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 import EventCard from "@/components/EventCard";
-import uxBootcamp from "../../public/assets/events/UX-Bootcamp.png";
-import rebase01 from "../../public/assets/events/rebase-01.png";
-import LLMs from "../../public/assets/events/LLMs.png";
-import flutter01 from "../../public/assets/events/FLUTTER-yaswanth.png";
-import flutter02 from "../../public/assets/events/Flutter-first-app.png";
-import opensource from "../../public/assets/events/open-source-git-github.png";
-import solutionchallenge from "../../public/assets/events/intro-google-solution-challenge.png";
-import android from "../../public/assets/events/android.png";
-import cvToCareer from "../../public/assets/events/cv-to-career.png";
-import becomGdscLead2024 from "../../public/assets/events/become-gdsc-lead-2024.png";
-import leftarrow from "../../public/assets/left-arrow.svg";
-import rightarrow from "../../public/assets/right-arrow.svg";
+import AnimatedText from "@/components/AnimatedText";
+import LLMs from "../../../public/assets/events/LLMs.png";
+import android from "../../../public/assets/events/android.png";
+import rebase01 from "../../../public/assets/events/rebase-01.png";
+import uxBootcamp from "../../../public/assets/events/UX-Bootcamp.png";
+import cvToCareer from "../../../public/assets/events/cv-to-career.png";
+import flutter01 from "../../../public/assets/events/FLUTTER-yaswanth.png";
+import flutter02 from "../../../public/assets/events/Flutter-first-app.png";
+import opensource from "../../../public/assets/events/open-source-git-github.png";
+import solutionchallenge from "../../../public/assets/events/intro-google-solution-challenge.png";
+import becomGdscLead2024 from "../../../public/assets/events/become-gdsc-lead-2024.png";
 
-const Events = () => {
-  const [showControls, setShowControls] = useState(false);
-  const carouselRef = useRef(null);
+const FramerImage = motion(Image);
 
-  useEffect(() => {
-    if (carouselRef.current) {
-      setShowControls(true);
-    }
-  }, [carouselRef]);
-
-  const handlePrevClick = () => {
-    carouselRef.current.scrollBy({
-      left: -carouselRef.current.offsetWidth,
-      behavior: "smooth",
-    });
-  };
-
-  const handleNextClick = () => {
-    carouselRef.current.scrollBy({
-      left: carouselRef.current.offsetWidth,
-      behavior: "smooth",
-    });
-  };
-
+const FeaturedEvent = ({ type, link, title, description, img, rsvp }) => {
+  const router = useRouter();
   return (
     <>
-      <section className="container px-28 sm:px-8">
-        
-        {/* event card carousel */}
-        <div className=" relative mt-2">
-          <div className="carousel" ref={carouselRef}>
-            <EventCard
+      <article
+        className="w-[80%] sm:w-full flex items-center justify-between relative rounded-br-2xl
+        rounded-3xl border border-solid border-dark dark:border-light bg-light dark:bg-[#242424] shadow-2xl p-6
+        lg:flex-col lg:p-4 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
+        "
+      >
+        <div className="absolute top-0 -right-3 -z-10 w-[100.7%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+        <Link
+          href={link}
+          target="_blank"
+          className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+        >
+          <FramerImage
+            src={img}
+            alt={title}
+            className="w-full h-auto"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+          />
+        </Link>
+        <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+          <span className="text-primary dark:text-secondary font-medium text-xl xs:text-base">
+            {type}
+          </span>
+          <Link href={rsvp} target="_blank" className="">
+            <h2 className="relative group my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-xl">
+              {title}
+              <span
+                className={`h-[2px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+                  router.asPath === link ? "w-full" : "w-0"
+                } dark:bg-light`}
+              ></span>
+            </h2>
+          </Link>
+          <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+            {description}
+          </p>
+          <div className="mt-2 flex items-center">
+            <Link
+              href={rsvp}
+              target="_blank"
+              className="border border-solid border-dark rounded-lg bg-dark dark:bg-light text-light 
+                        dark:text-dark p-2 px-6 text-lg font-semibold
+                        hover:bg-light hover:text-dark dark:hover:bg-dark dark:hover:text-light 
+                        hover:border-dark dark:hover:border-light sm:px-4 sm:text-base transition duration-500 ease-in-out"
+            >
+              RSVP Now
+            </Link>
+          </div>
+        </div>
+      </article>
+    </>
+  );
+};
+
+const Events = () => {
+  return (
+    <>
+      <Head>
+        <title>Events | GDSC VIIT</title>
+        <meta name="description" content="Google Developer Student Clubs Vignan's Institute of Information Technology - Visakhapatnam | Google Developer Student Clubs (GDSC) are community groups for college and university students interested in Google developer technologies. Students from all undergraduate or graduate programs with an interest in growing as a developer are welcome." />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_32,q_auto:good,w_32/v1/gcs/platform-data-dsc/contentbuilder/favicon.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_192,q_auto:good,w_192/v1/gcs/platform-data-dsc/contentbuilder/favicon.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_16,q_auto:good,w_16/v1/gcs/platform-data-dsc/contentbuilder/favicon.png" sizes="16x16" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_180,q_auto:good,w_180/v1/gcs/platform-data-dsc/contentbuilder/favicon.png" />
+      </Head>
+      <section className="container px-14 sm:px-8 pb-20">
+        <AnimatedText
+          text="Recent Events"
+          className="mb-16 lg:!text-xl sm:mb-8 sm:!text-6xl xs:!text-4xl pt-16 flex items-center justify-center"
+        />
+        <div className="flex items-center justify-center pb-10">
+          <FeaturedEvent
+            type="Featured Event"
+            title="CV to Career 📑"
+            description="Session covering topics like career planning, how to crack internship & resume strategies."
+            img={cvToCareer}
+            link="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-cv-to-career/"
+            rsvp="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-cv-to-career/"
+          />
+        </div>
+        <div className="flex items-center justify-center relative mt-2">
+          <div className="grid grid-cols-4 2xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-center justify-center">
+            {/* <EventCard
               className={`mr-6`}
               link="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-cv-to-career/"
               title="CV to Career 📑"
@@ -54,7 +115,7 @@ const Events = () => {
               featuredImage={cvToCareer}
               description="Session covering topics like career planning, how to crack internship & resume strategies."
               rsvp="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-cv-to-career/"
-            />
+            /> */}
             <EventCard
               className={`mr-6`}
               link="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-road-to-becoming-google-developer-student-clubs-lead-1/"
@@ -137,27 +198,6 @@ const Events = () => {
               rsvp="https://gdsc.community.dev/events/details/developer-student-clubs-vignans-institute-of-information-technology-visakhapatnam-presents-inauguration-followed-by-a-session-on-flutter/"
             />
           </div>
-        </div>
-
-        {/* navigation arrows */}
-        <div className="controls flex items-center justify-evenly pb-10 sm:hidden">
-          <motion.button
-            className="control-btn prev"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handlePrevClick}
-          >
-            <Image src={leftarrow} alt="Previous" />
-          </motion.button>
-
-          <motion.button
-            className="control-btn next"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handleNextClick}
-          >
-            <Image src={rightarrow} alt="Next" />
-          </motion.button>
         </div>
       </section>
     </>
