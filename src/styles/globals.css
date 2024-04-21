@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@import url("../../public/assets/fonts/google/product-sans.css");
+@import url("../../public/assets/fonts/other/carpenter/carpenter.css");
+@import url("../../public/assets/fonts/other/neue-montreal/neue-montreal.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* custom css */
+@import url("./Buttons.module.css");
+@import url("./Events.module.css");
+@import url("./Hero.module.css");
+@import url("./Profilecard.module.css");
+
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-product-sans {
+  font-family: "Product Sans", sans-serif;
+}
+
+.font-carpenter-sans {
+  font-family: "Carpenter", sans-serif;
+}
+
+.font-neue-montreal-sans {
+  font-family: "Carpenter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Product Sans", sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.dark, .theme-transition {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  overflow-x: hidden;
+  @apply bg-light dark:bg-dark;
+
+  /* scrollbar */
+  &::-webkit-scrollbar {
+    @apply w-[10px] h-1;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply dark:bg-[#202324] bg-[#f1f1f1];
+    /* @apply bg-white; */
+  }
+  
+  &::-webkit-scrollbar-track-piece {
+    @apply dark:bg-[#202324] bg-[#cfcfcf];
+  }
+  
+  &::-webkit-scrollbar-corner {
+    @apply dark:bg-[#202324] bg-[#cfcfcf];
+  }
+  
+  &::-webkit-resizer {
+    @apply dark:bg-[#202324] bg-[#616161];
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    @apply dark:bg-[#454a4d] bg-[#9d9d9d] rounded-sm;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    @apply dark:bg-[#575e62] bg-[#787878];
+  }
+
+  /* Buttons */
+  &::-webkit-scrollbar-button:single-button {
+    @apply dark:hover:bg-[#454a4d] hover:bg-[#9d9d9d] rounded-sm;
+    /* background-color: #cfcfcf; */
+    display: block;
+    border-style: solid;
+    height: 10px;
+    width: 16px;
+  }
+  /* Up */
+  &::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 6px 6px 6px;
+    @apply border-transparent border-b-[#454a4d] dark:border-b-[#9d9d9d];
+    /* border-color: transparent transparent #555555 transparent; */
+  }
+
+  &::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    @apply border-transparent border-b-[#454a4d] dark:border-b-[#9d9d9d];
+  }
+  /* Down */
+  &::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 6px 6px 0 6px;
+    @apply border-transparent border-t-[#454a4d] dark:border-t-[#9d9d9d];
+  }
+
+  &::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    @apply border-transparent border-t-[#454a4d] dark:border-t-[#9d9d9d];
+  }
+}

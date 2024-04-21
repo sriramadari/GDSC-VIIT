@@ -1,0 +1,39 @@
+/* Neue Montreal Font */
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("PPNeueMontreal-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("PPNeueMontreal-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("PPNeueMontreal-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("PPNeueMontreal-SemiBolditalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("PPNeueMontreal-Thin.woff") format("woff");
+  font-weight: thin;
+  font-style: italic;
+}
+
+/* Example Usage */
+/* body {
+  font-family: "Neue Montreal", sans-serif;
+} */
