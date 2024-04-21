@@ -1,41 +1,28 @@
 {
-  "name": "hackathon-website",
+  "name": "gdsc-viit-2024",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-multi-carousel": "^2.8.4",
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.0",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4",
+    "next": "13.5.1",
+    "next-themes": "^0.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "framer-motion": "^11.1.1",
+    "postcss": "^8.4.38",
+    "sass": "^1.75.0",
+    "tailwindcss": "^3.4.3"
   }
 }
